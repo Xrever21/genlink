@@ -1,19 +1,7 @@
-version: '3.8'
 services:
-  backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    ports:
-      - "3002:3002"
-    volumes:
-      - ./backend:/app
-    restart: always
-
-  frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
+  url_shortener:
+    build: .
+    container_name: url_shortener
     ports:
       - "8083:8083"
     restart: always
